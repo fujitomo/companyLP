@@ -1,0 +1,220 @@
+﻿.header {
+    display: flex;
+    display: flex;
+    max-width: 1080px;
+    height: 144px;
+
+    margin: 0 auto;
+    &__cart {
+        position: absolute;
+        right: 5px;
+        width: 51%;
+    }
+    &__title {
+        position: relative;
+        top: 33px;
+
+        &__text {
+            position: absolute;
+            top: 9px;
+            left: 23 px;
+            width: 100%;
+            @include fontsize(8, $root_font_size);
+        }
+        &__logo {
+            img {
+                // max-widthはpx等で指定する。
+                // width: 47%と指定しているので、%の数値がそれ以上またはそれ以下になるわけがないので、
+                // max-width: 81%は意味がない。
+                // width: 47%;
+                max-width: 180px;
+
+                // imgの height: auto はすごくよく書くので、baseの部分でかいておく
+                // _base.scssご参照ください。
+                height: auto;
+                margin-top: 18px;
+                cursor: pointer;
+            }
+        } //end __logo
+    } //end __title
+
+    &__navi-sp {
+        position: absolute;
+        top: 16px;
+        z-index: 300;
+        width: 75px;
+        height: 40px;
+        margin-top: 10px;
+    }
+
+    &__navi {
+        padding-top: 24px;
+        nav {
+            margin-left: 258px;
+            ul {
+                // margin-left: 317px;
+                padding-top: 14px;
+                li {
+                    display: inline-block;
+                    width: 73px;
+                    font-weight: 900;
+                    @include fontsize(12.2, $root_font_size);
+                    //vertical-align: middle;
+                    a:hover {
+                        //text-decoration: underline;
+                    }
+                }
+            }
+        }
+    } // end _navi
+
+    &__navi-contact {
+        //@extend .header__navi;
+        position: absolute;
+        top: -5px;
+        width: 150px !important;
+        height: 150px;
+        margin-left: 20px;
+        background-color: #1a8fe3;
+        background-color: $color_header_contact;
+        a {
+            position: absolute;
+            top: 37px;
+            left: 0px;
+            width: 100%;
+            line-height: 49px;
+            text-align: center;
+        }
+        &--format {
+            &::before {
+                display: block;
+                content: url(../images/hd_mail.png);
+            }
+            color: $color_main;
+        }
+    }
+}
+/* --------------------------------
+     * ハンバーガーメニュー
+     * -------------------------------- */
+.global-nav {
+    position: fixed;
+    top: -32px;
+    right: -810px; /* これで隠れる */
+    z-index: 200;
+    width: 78%; /* スマホに収まるくらい */
+    height: 1000%;
+    //padding: 17px 0 0px 16px;
+    overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+    text-align: left;
+    background-color: $color_main;
+    transition: all 0.6s;
+    &__list {
+        margin: 0;
+        margin-top: 122px;
+        padding: 0;
+        //padding: 103px 15px 9px 8px;
+        line-height: 31px;
+        list-style: none;
+        &--border {
+            padding: 10px 0;
+            border: 1px solid $color_header_button;
+            a {
+                margin-left: 30px;
+                color: $color_header_list_sp;
+            }
+        }
+    }
+}
+
+.hamburger {
+    position: absolute;
+    top: -13px;
+    right: -61px;
+    z-index: 300;
+    width: 59px;
+    height: 40px;
+    margin-top: 10px;
+    cursor: pointer;
+    &__line {
+        position: absolute;
+        left: 11px;
+        width: 30px;
+        height: 4px;
+        background-color: #333;
+        border-radius: 4px;
+        transition: all 0.3s;
+        &--1 {
+            top: 14px;
+        }
+        &--2 {
+            top: 20px;
+            margin: 4px 0px;
+        }
+        &--3 {
+            top: 26px;
+            margin: 8px 0px;
+        }
+    } //&__line close
+}
+
+.global-nav__item {
+    padding: 0 14px;
+    text-align: center;
+    a {
+        display: block;
+        padding: 8px 0;
+        color: #111;
+        text-decoration: none;
+        border-bottom: 1px solid #eee;
+        &:hover {
+            background-color: #eee;
+        }
+    }
+}
+
+.black-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    visibility: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.6s;
+}
+
+.is-active-gnav {
+    right: 0px;
+}
+// /* 表示された時用のCSS */
+.nav-open {
+    position: fixed;
+    top: 0;
+    right: 0px;
+}
+.nav-open .global-nav {
+    right: -31px;
+    right: 0;
+}
+.nav-open .black-bg {
+    visibility: visible;
+    opacity: 0.8;
+}
+.nav-open .hamburger__line--1 {
+    top: 27px;
+    transform: rotate(48deg);
+    transition: all 0.2s;
+}
+.nav-open .hamburger__line--2 {
+    left: 50%;
+    width: 0;
+}
+.nav-open .hamburger__line--3 {
+    top: 20px;
+    transform: rotate(-45deg);
+    transition: all 0.2s;
+}

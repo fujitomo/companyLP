@@ -1,0 +1,114 @@
+﻿.service {
+    //position: relative;
+    max-width: 1080px;
+    margin: 0 auto;
+    opacity: 1;
+    transition: 1s ease;
+
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        //padding: 0 180px;
+
+        &__item {
+            box-sizing: border-box;
+            width: 25%;
+            min-width: 248px;
+            padding: 80px 0;
+            line-height: 130%;
+            border: 1px solid $color_border;
+            transition: 1s ease; //TODO
+
+            &__title {
+                margin: 18px 0;
+            }
+
+            //title共通(継承用)
+            .title {
+                display: block;
+                margin: 18px 0;
+                margin-bottom: 10px;
+            }
+
+            &__website-title {
+                &::before {
+                    @extend .title;
+                    content: url(../images/icon/service1.png);
+                }
+            }
+
+            &__ecsite-title {
+                &::before {
+                    //position: relative;
+                    display: block;
+                    margin-bottom: 10px;
+                    content: url(../images/icon/service1.png);
+                }
+            }
+
+            &__webapp-title {
+                &::before {
+                    //position: relative;
+                    display: block;
+                    margin-bottom: 10px;
+                    content: url(../images/icon/service1.png);
+                }
+            }
+
+            &__consulting-title {
+                &::before {
+                    //position: relative;
+                    display: block;
+                    margin-bottom: 10px;
+                    content: url(../images/icon/service1.png);
+                }
+            }
+
+            &__sub-title {
+                //display: block;
+                margin-top: 5px;
+                color: #1a8fe3;
+                line-height: 100%;
+                text-align: center;
+                @include fontsize(10, $root_font_size);
+            }
+
+            &__explanation {
+                @include fontsize(12, $root_font_size);
+                height: 50%;
+                padding: 0px 35px;
+                font-weight: 500;
+                text-align: left;
+
+                &--strong {
+                    display: block;
+                    margin-bottom: 10px;
+                    font-family: 'Noto Sans JP', '游ゴシック体', 'YuGothic',
+                        '游ゴシック', 'Yu Gothic', 'メイリオ', sans-serif;
+                    @include fontsize(12, $root_font_size);
+                }
+
+                &--supplement {
+                    display: block;
+                    @include fontsize(9, $root_font_size);
+                }
+            }
+
+            &__button {
+                width: 50%;
+                height: 50px;
+                margin: 20px auto;
+                font-weight: 900;
+                line-height: 50px;
+                text-align: center;
+                text-decoration: none;
+                background: $color_header_contact;
+                &__text {
+                    color: $color_main;
+                    @include fontsize(12, $root_font_size);
+                }
+            } // end .button
+        } //end &__item
+    } //end .list
+} //end .service

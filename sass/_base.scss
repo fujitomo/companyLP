@@ -1,0 +1,91 @@
+html {
+    font-size: $root_font_size;
+}
+
+body {
+    font-family: $font_body;
+    background-color: $color_side !important;
+    //$root_font_size: $root_font_size;
+}
+
+img {
+    // だいたいほとんどの画像がこの幅と高さなので、最初からつけておくといい
+    width: 100%;
+    height: auto;
+    // 画像の下に無駄な余白できるのを防止するため必ずかく
+    vertical-align: bottom;
+}
+
+.wrapper {
+    @include media(min-l) {
+        // width: 1042px;
+        width: 105%;
+    }
+
+    margin: 0 auto;
+    text-align: center;
+    background-color: $color_main;
+    .contents {
+        @include media(max-xs) {
+            //width: 950px;
+            padding: 0 20px;
+        }
+        margin: auto;
+        padding: 0px 0;
+        .page-top {
+            @include media(max-xs) {
+                display: none;
+            }
+            text-align: right;
+            p {
+                color: $color_strong_price;
+                cursor: pointer;
+                @include fontsize(14, $root_font_size);
+                .fa-check-square-o:before {
+                    padding: 0 5px;
+                    color: $color_strong_price;
+                    content: '\f062'; /*アイコンの種類*/
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .fa-check-square-o:before {
+        padding: 0 5px;
+        content: '\f07a'; /*アイコンの種類*/
+    }
+    .fa-angle-left:before {
+        padding: 0 5px;
+        color: white;
+        content: '\f104'; /*アイコンの種類*/
+    }
+    .fa-angle-right:before {
+        padding: 0 5px;
+        color: white;
+        content: '\f105'; /*アイコンの種類*/
+    }
+}
+
+.pc {
+    @include media(max-xs) {
+        display: none;
+    }
+}
+
+.sp {
+    @include media(min-xs) {
+        display: none;
+    }
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+sup {
+    font-size: small;
+    vertical-align: text-top;
+}
