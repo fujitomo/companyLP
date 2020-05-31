@@ -4,6 +4,7 @@
  * Richard Clark (http://richclarkdesign.com)
  * http://cssreset.com
  */
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 html,
 body,
 div,
@@ -190,6 +191,11 @@ body {
   background-color: #dddddd !important;
 }
 
+@font-face {
+  font-family: 'Sarina';
+  src: url(../font/Sarina-Regular.ttf);
+}
+
 img {
   width: 100%;
   height: auto;
@@ -217,34 +223,6 @@ img {
   .wrapper .contents {
     padding: 0 20px;
   }
-}
-
-.wrapper .contents .page-top {
-  text-align: right;
-}
-
-@media only screen and (max-width: 576px) {
-  .wrapper .contents .page-top {
-    display: none;
-  }
-}
-
-.wrapper .contents .page-top p {
-  color: #1a8fe3;
-  cursor: pointer;
-  font-size: 14px;
-  font-size: 0.93333rem;
-}
-
-.wrapper .contents .page-top p .fa-check-square-o:before {
-  padding: 0 5px;
-  color: #1a8fe3;
-  content: '\f062';
-  /*アイコンの種類*/
-}
-
-.wrapper .contents .page-top p:hover {
-  text-decoration: underline;
 }
 
 .wrapper .fa-check-square-o:before {
@@ -338,7 +316,7 @@ sup {
 }
 
 .header__navi nav {
-  margin-left: 258px;
+  margin-left: 284px;
 }
 
 .header__navi nav ul {
@@ -410,12 +388,12 @@ sup {
 
 .global-nav__list--border {
   padding: 10px 0;
-  border: 1px solid #b5b5b5;
+  border: 1px solid #1a8fe3;
 }
 
 .global-nav__list--border a {
   margin-left: 30px;
-  color: #f15500;
+  color: #1a8fe3;
 }
 
 .hamburger {
@@ -572,7 +550,6 @@ sup {
   min-width: 248px;
   padding: 80px 0;
   line-height: 130%;
-  border: 1px solid #f3f3f3;
   transition: 1s ease;
 }
 
@@ -609,8 +586,10 @@ sup {
 }
 
 .service .list__item__sub-title {
+  display: block;
   margin-top: 5px;
   color: #1a8fe3;
+  font-size: 1rem;
   line-height: 100%;
   text-align: center;
   font-size: 10px;
@@ -652,6 +631,170 @@ sup {
 }
 
 .service .list__item__button__text {
+  color: #ffffff;
+  font-size: 12px;
+  font-size: 0.8rem;
+}
+
+.catchphrase {
+  position: relative;
+}
+
+.catchphrase .sarina {
+  padding: 10px 0px 20px;
+  font-family: 'Sarina', cursive;
+  font-style: italic;
+  font-size: 32px;
+  font-size: 2.13333rem;
+}
+
+.catchphrase .catchphrase-box {
+  position: absolute;
+  top: 54%;
+  left: 45%;
+  display: block;
+  width: 40%;
+  padding: 16px 26px;
+  color: #fff;
+  text-align: left;
+  background: rgba(71, 81, 96, 0.75);
+  -webkit-transform: translate(0%, -50%);
+  -moz-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  -o-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+  transition: 1s ease;
+}
+
+.catchphrase .catchphrase-text {
+  margin-top: 47px;
+  line-height: 1.8;
+}
+
+.nows {
+  margin: 35px 0;
+}
+
+.nows .title, .nows .service .list__item__website-title::before, .service .nows .list__item__website-title::before {
+  display: block;
+  font-size: 23px;
+  font-size: 1.53333rem;
+  margin-bottom: 11px;
+}
+
+.nows .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nows .list__item {
+  width: 13%;
+  min-width: 248px;
+  margin: 0 24px;
+  padding: 80px 0;
+  line-height: 130%;
+  transition: 1s ease;
+}
+
+.nows .list__item--date-color {
+  color: #1a8fe3;
+}
+
+.nows .list__item__news {
+  height: 70px;
+  margin: 29px 0px;
+  line-height: 1.5;
+  text-align: left;
+  font-size: 13px;
+  font-size: 0.86667rem;
+}
+
+.nows .list__item .title, .nows .list__item .service .list__item__website-title::before, .service .nows .list__item .list__item__website-title::before {
+  display: block;
+  margin: 18px 0;
+  margin-bottom: 10px;
+}
+
+.nows .list__item__button {
+  width: 75%;
+  height: 50px;
+  margin: 0 auto;
+  font-weight: 900;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  background: #1a8fe3;
+}
+
+.nows .list__item__button__text {
+  color: #ffffff;
+  font-size: 12px;
+  font-size: 0.8rem;
+}
+
+.works {
+  max-width: 1080px;
+  margin: 35px auto;
+}
+
+.works .title, .works .service .list__item__website-title::before, .service .works .list__item__website-title::before {
+  display: block;
+  margin-bottom: 11px;
+  font-size: 23px;
+  font-size: 1.53333rem;
+}
+
+.works .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.works .list__item {
+  width: 21%;
+  min-width: 150px;
+  margin: 0 19px;
+  padding: 80px 0;
+  line-height: 130%;
+  transition: 1s ease;
+}
+
+.works .list__item__block {
+  height: 87%;
+}
+
+.works .list__item__block--date-color {
+  color: #1a8fe3;
+}
+
+.works .list__item__block__news {
+  height: 70px;
+  margin: 29px 0px;
+  line-height: 1.8;
+  text-align: left;
+  font-size: 13px;
+  font-size: 0.86667rem;
+}
+
+.works .list__item__block .title, .works .list__item__block .service .list__item__website-title::before, .service .works .list__item__block .list__item__website-title::before {
+  display: block;
+  margin: 18px 0;
+  margin-bottom: 10px;
+}
+
+.works .list__item__button {
+  width: 75%;
+  height: 50px;
+  margin: 0 auto;
+  font-weight: 900;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  background: #1a8fe3;
+}
+
+.works .list__item__button__text {
   color: #ffffff;
   font-size: 12px;
   font-size: 0.8rem;

@@ -50,7 +50,7 @@
     &__navi {
         padding-top: 24px;
         nav {
-            margin-left: 258px;
+            margin-left: 284px;
             ul {
                 // margin-left: 317px;
                 padding-top: 14px;
@@ -118,10 +118,10 @@
         list-style: none;
         &--border {
             padding: 10px 0;
-            border: 1px solid $color_header_button;
+            border: 1px solid $color_button_back;
             a {
                 margin-left: 30px;
-                color: $color_header_list_sp;
+                color: $color_button_back;
             }
         }
     }

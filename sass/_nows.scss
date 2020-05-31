@@ -1,0 +1,59 @@
+﻿.nows {
+    margin: 35px 0;
+    .title {
+        display: block;
+        @include fontsize(23, $root_font_size);
+        margin-bottom: 11px;
+    }
+
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        //padding: 0 180px;
+
+        &__item {
+            width: 13%;
+            min-width: 248px;
+            margin: 0 24px;
+            //min-width: 248px;
+            padding: 80px 0;
+            line-height: 130%;
+            transition: 1s ease; //TODO
+
+            &--date-color {
+                color: $color_date_font;
+            }
+
+            &__news {
+                height: 70px;
+                margin: 29px 0px;
+                line-height: 1.5;
+                text-align: left;
+                @include fontsize(13, $root_font_size);
+            }
+
+            //title共通(継承用)
+            .title {
+                display: block;
+                margin: 18px 0;
+                margin-bottom: 10px;
+            }
+
+            &__button {
+                width: 75%;
+                height: 50px;
+                margin: 0 auto;
+                font-weight: 900;
+                line-height: 50px;
+                text-align: center;
+                text-decoration: none;
+                background: $color_header_contact;
+                &__text {
+                    color: $color_main;
+                    @include fontsize(12, $root_font_size);
+                }
+            } // end .button
+        } //end &__item
+    } //end .list
+}

@@ -17,7 +17,6 @@
             min-width: 248px;
             padding: 80px 0;
             line-height: 130%;
-            border: 1px solid $color_border;
             transition: 1s ease; //TODO
 
             &__title {
@@ -66,9 +65,11 @@
             }
 
             &__sub-title {
+                display: block;
                 //display: block;
                 margin-top: 5px;
                 color: #1a8fe3;
+                font-size: 1rem;
                 line-height: 100%;
                 text-align: center;
                 @include fontsize(10, $root_font_size);
@@ -103,7 +104,7 @@
                 line-height: 50px;
                 text-align: center;
                 text-decoration: none;
-                background: $color_header_contact;
+                background: $color_button_back;
                 &__text {
                     color: $color_main;
                     @include fontsize(12, $root_font_size);
