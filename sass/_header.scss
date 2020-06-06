@@ -1,11 +1,10 @@
 ﻿.header {
     display: flex;
-    display: flex;
     max-width: 1080px;
     height: 144px;
 
     margin: 0 auto;
-    &__cart {
+    .header-cart {
         position: absolute;
         right: 5px;
         width: 51%;
@@ -72,11 +71,11 @@
         //@extend .header__navi;
         position: absolute;
         top: -5px;
+        left: 82%;
         width: 150px !important;
         height: 150px;
         margin-left: 20px;
-        background-color: #1a8fe3;
-        background-color: $color_header_contact;
+        @extend .common__button;
         a {
             position: absolute;
             top: 37px;

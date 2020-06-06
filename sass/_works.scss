@@ -50,18 +50,12 @@
 
             &__button {
                 width: 75%;
-                height: 50px;
-                margin: 0 auto;
-                font-weight: 900;
-                line-height: 50px;
-                text-align: center;
-                text-decoration: none;
-                background: $color_header_contact;
+                @extend .common__button;
                 &__text {
                     color: $color_main;
                     @include fontsize(12, $root_font_size);
-                }
-            } // end .button
+                } // end &__textn
+            } // end &__button
         } //end &__item
     } //end .list
 }

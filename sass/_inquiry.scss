@@ -1,0 +1,40 @@
+﻿.inquiry {
+    position: relative;
+    height: 400px;
+    background-image: url('../images/bg_contact.jpg');
+    &-box {
+        @extend .common__contents-box;
+        top: 54%;
+        left: 10%;
+        width: 41%;
+        &__title {
+            padding: 10px 0px 20px;
+            font-family: 'Sarina', cursive;
+            font-style: italic;
+            @include fontsize(32, $root_font_size);
+        }
+        &__tel {
+            padding: 15px 0px;
+            &--string {
+                @include fontsize(38, $root_font_size);
+            }
+        }
+        &__acceptance {
+            @include fontsize(10, $root_font_size);
+            margin-left: 51px;
+        }
+        &__text {
+            @extend .common__contents-text;
+        }
+        &__button {
+            @extend .common__button;
+            width: 56%;
+            margin: 16px 0px;
+
+            &__text {
+                @extend .common__button--font-color;
+                @include fontsize(14, $root_font_size);
+            }
+        }
+    }
+}

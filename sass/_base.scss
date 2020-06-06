@@ -96,3 +96,40 @@ sup {
     font-size: small;
     vertical-align: text-top;
 }
+
+//共通
+.common {
+    &__contents-box {
+        position: absolute;
+        display: block;
+        width: 41%;
+        padding: 16px 26px;
+        color: #fff;
+        text-align: left;
+        background: rgba(71, 81, 96, 0.75);
+        -webkit-transform: translate(0%, -50%);
+        -moz-transform: translate(0%, -50%);
+        -ms-transform: translate(0%, -50%);
+        -o-transform: translate(0%, -50%);
+        transform: translate(0%, -50%);
+        transition: 1s ease;
+    } //end .contents-box
+
+    &__contents-text {
+        margin-top: 47px;
+        line-height: 1.8;
+    } //end .contents-text
+
+    &__button {
+        height: 50px;
+        margin: 0 auto;
+        font-weight: 900;
+        line-height: 50px;
+        text-align: center;
+        text-decoration: none;
+        background: $color_header_contact;
+        &--font-color {
+            color: $color_main;
+        } // end &__text
+    } // end .button
+}
