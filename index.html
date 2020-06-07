@@ -50,7 +50,7 @@
 
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header class="header pc">
       <div class="header__title">
         <div class="header__title__text">
           <h1>滋賀県のホームページ制作会社</h1>
@@ -58,27 +58,6 @@
         <div class="header__title__logo">
           <h1><img src="images/demo_logo.png" alt="株式会社〇〇〇〇〇〇｜滋賀のWEB制作会社" /></h1>
         </div>
-      </div>
-
-      <div class="header__navi-sp">
-        <nav class="global-nav sp" id="gnav">
-          <ul class="global-nav__list">
-            <li class="global-nav__list--border"><a href="#">お知らせ</a></li>
-            <li class="global-nav__list--border"><a href="#">事業案内</a></li>
-            <!-- アイコンは空のspanではなく、擬似要素（before,after）でつける -->
-            <li class="global-nav__list--border"><a href="#">制作事例</a></li>
-            <li class="global-nav__list--border"><a href="#">会社案内</a></li>
-            <li class="global-nav__list--border"><a href="#">ブログ</a></li>
-            <li class="global-nav__list--border"><a href="#">求人情報</a></li>
-            <li class="global-nav__list--border"><a href="#">お問い合わせ</a></li>
-          </ul>
-        </nav>
-        <div class="hamburger sp" id="menu-btn">
-          <span class="hamburger__line hamburger__line--1"></span>
-          <span class="hamburger__line hamburger__line--2"></span>
-          <span class="hamburger__line hamburger__line--3"></span>
-        </div>
-        <div class="black-bg" id="js-black-bg"></div>
       </div>
 
       <div class="header__navi pc">
@@ -99,6 +78,37 @@
         </nav>
       </div>
     </header>
+
+    <header class="header-sp">
+      <div class="title">
+        <div class="title__logo">
+          <h1><img src="images/demo_logo.png" alt="株式会社〇〇〇〇〇〇｜滋賀のWEB制作会社" /></h1>
+        </div>
+      </div>
+      <div class="header-sp__navi">
+        <nav class="global-nav" id="gnav">
+          <ul class="global-nav__list">
+            <li class="global-nav__list--border"><a href="#">お知らせ</a></li>
+            <li class="global-nav__list--border"><a href="#">事業案内</a></li>
+            <!-- アイコンは空のspanではなく、擬似要素（before,after）でつける -->
+            <li class="global-nav__list--border"><a href="#">制作事例</a></li>
+            <li class="global-nav__list--border"><a href="#">会社案内</a></li>
+            <li class="global-nav__list--border"><a href="#">ブログ</a></li>
+            <li class="global-nav__list--border"><a href="#">求人情報</a></li>
+            <li class="global-nav__list--border"><a href="#">お問い合わせ</a></li>
+          </ul>
+        </nav>
+        <div class="hamburger" id="menu-btn">
+          <span class="hamburger__line hamburger__line--1"></span>
+          <span class="hamburger__line hamburger__line--2"></span>
+          <span class="hamburger__line hamburger__line--3"></span>
+          <p class="hamburger__menu-close">閉じる</p>
+          <p class="hamburger__menu-open">メニュー</p>
+        </div>
+        <div class="black-bg" id="js-black-bg"></div>
+      </div>
+    </header>
+
 
     <!-- mainタグにも.mainつける -->
     <main class="main">
